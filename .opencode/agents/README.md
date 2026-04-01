@@ -30,9 +30,9 @@ Based on 2025-2026 benchmarks (Mazur Writing Score + LM Arena human preference):
 | **GPT-5.2** | Best for marketing copy | Not recommended for fiction — blander voice |
 
 **Recommended setup:**
-- `write` agent → Claude Opus 4.6 (quality matters most here)
-- `plan` + `brainstorm` → Claude Sonnet 4.5 (good prose, lower cost)
-- `explore` → Claude Haiku 4 (fast reads, minimal cost)
+- `cw-write` → Claude Opus 4.6 (quality matters most here)
+- `cw-plan` + `cw-brainstorm` → Claude Sonnet 4.5 (good prose, lower cost)
+- `cw-explore` → Claude Haiku 4 (fast reads, minimal cost)
 
 Update the `model:` field in each `.md` file to match your available provider/model IDs.
 

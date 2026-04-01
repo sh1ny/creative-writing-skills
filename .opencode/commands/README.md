@@ -20,7 +20,7 @@ Eight commands covering the full novel-writing workflow. In opencode, invoke wit
 | `/project:outline` | Build outline top-down (act → chapter → scene → beats) |
 | `/project:beat <Act#/Chapter#/Scene#> [beat #]` | Write beat prose — the atomic unit of novel writing |
 | `/project:style` | Create or update `Style/master.md` from sample writing |
-| `/project:critique <beat\|scene\|chapter\|outline>` | Get structured feedback at any scope |
+| `/project:critique <beat\|scene\|chapter\|act\|outline>` | Get structured feedback at any scope |
 | `/project:bs` | Brainstorm and capture exploratory ideas |
 
 ---

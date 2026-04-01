@@ -188,9 +188,7 @@ Slash commands (`/novel-init`, `/codex`, `/pitch`, etc.) are included automatica
 
 ### opencode
 
-Clone the repository and point opencode at it. Slash commands live in `.opencode/commands/` and are invoked as `/project:novel-init`, `/project:codex`, `/project:beat`, etc.
-
-The skill SKILL.md files are tool-agnostic and work in opencode without changes.
+Clone the repository, then copy `.opencode/commands/` and `.opencode/agents/` into your novel project. Slash commands are invoked as `/project:novel-init`, `/project:codex`, `/project:beat`, etc. See [INSTALL.md](INSTALL.md) for the full setup steps.
 
 ### Claude.ai
 
@@ -225,7 +223,7 @@ python scripts/create_skill_zips.py
 4. Test in a novel project directory
 
 ### Version
-Defined in `.claude-plugin/marketplace.json` → `metadata.version`. Current: `1.0.0`
+Defined in `.claude-plugin/marketplace.json` → `metadata.version`. Current: `1.0.2`
 
 ---
 

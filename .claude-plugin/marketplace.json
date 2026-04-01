@@ -6,7 +6,7 @@
     },
     "metadata": {
       "description": "A complete novel-writing workflow with Obsidian-compatible vault structure — pitch, codex, outline, beat writing, critique, and brainstorming",
-      "version": "1.0.1"
+      "version": "1.0.2"
     },
     "plugins": [
       {

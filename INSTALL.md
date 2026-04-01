@@ -63,10 +63,13 @@ cp -r creative-writing-skills/.opencode/commands /your/novel/project/.opencode/c
 cp -r creative-writing-skills/.opencode/agents   /your/novel/project/.opencode/agents
 ```
 
-Or, if you want the skills available globally, copy them into your opencode config directory:
+Or, if you want the agents available globally across all your novel projects, copy them into your opencode config directory:
 
 ```bash
-cp -r creative-writing-skills/.opencode/agents ~/.config/opencode/agents
+cp creative-writing-skills/.opencode/agents/cw-write.md ~/.config/opencode/agents/
+cp creative-writing-skills/.opencode/agents/cw-plan.md ~/.config/opencode/agents/
+cp creative-writing-skills/.opencode/agents/cw-brainstorm.md ~/.config/opencode/agents/
+cp creative-writing-skills/.opencode/agents/cw-explore.md ~/.config/opencode/agents/
 ```
 
 > **Note:** Commands (`.opencode/commands/`) must live in the project — they're project-specific. Agents can be global or per-project.
@@ -83,7 +86,7 @@ Edit each `.md` file's `model:` field:
 
 | Agent file | Default model | Recommended |
 |-----------|--------------|-------------|
-| `cw-write.md` | `anthropic/claude-opus-4-5` | `anthropic/claude-opus-4-5` or `anthropic/claude-opus-4-6` if available |
+| `cw-write.md` | `anthropic/claude-opus-4-5` | `anthropic/claude-opus-4-6` (best prose quality) |
 | `cw-plan.md` | `anthropic/claude-sonnet-4-5` | `anthropic/claude-sonnet-4-5` |
 | `cw-brainstorm.md` | `anthropic/claude-sonnet-4-5` | `anthropic/claude-sonnet-4-5` |
 | `cw-explore.md` | `anthropic/claude-haiku-4-20250514` | `anthropic/claude-haiku-4-20250514` |
@@ -98,7 +101,7 @@ Run `opencode models` to see all model IDs available for your configured provide
 
 ### Prerequisites
 
-- A Claude.ai account (Pro or higher recommended — Skills require extended context)
+- A Claude.ai account (Pro or higher — Skills are a Pro feature, not available on the free tier)
 
 ### Install
 
@@ -178,4 +181,4 @@ Based on 2026 creative writing benchmarks:
 
 **Skill files not installing on Claude.ai**
 - Ensure the `.skill` file is from the latest release
-- Skills require Claude.ai Pro or higher — free tier does not support Skills
+- Skills are a Pro feature — upgrade your Claude.ai account to enable them
