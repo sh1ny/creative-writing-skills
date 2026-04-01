@@ -1,6 +1,6 @@
 # Worldbuilding - Brainstorming Reference
 
-This reference helps capture exploration of fictional world elements: magic systems, cultures, history, geography. This is brainstorming - if ready to finalize/document, use cw-official-docs instead.
+This reference helps capture exploration of fictional world elements for your novel: magic systems, cultures, history, geography. This is brainstorming - if ready to finalize/document, use `/codex` instead.
 
 ## Brainstorm vs Document
 
@@ -10,13 +10,20 @@ This reference helps capture exploration of fictional world elements: magic syst
 - User is figuring it out
 - Skeletal, exploratory notes
 
-**Ready to document (use cw-official-wiki):**
+**Ready to document (use `/codex`):**
 - User has decided
 - Single canonical version
 - Polished, reader-ready
 - Nothing left undecided
 
-Can mention: "Ready to document this? We could create a documentation page"
+Can mention: "Ready to document this? We could create a documentation page in your Codex/Concepts/ folder."
+
+## Vault Integration
+
+When capturing worldbuilding brainstorming:
+- Note location name for later Codex entry: `[[LocationName]]`
+- If it belongs to a larger world system, note that context
+- Worldbuilding that gets finalized goes to `Codex/Concepts/[topic].md`
 
 ## What Worldbuilding Brainstorming Looks Like
 
@@ -150,6 +157,14 @@ Multiple versions of history can coexist until user decides.
 
 ### ✅ Good Capture:
 ```markdown
+---
+type: brainstorm
+topic: "Danger rating system exploration"
+related-codex: []
+related-outline: []
+tags: [brainstorm, notes, worldbuilding, magic-system]
+---
+
 # Danger Rating Ideas
 
 - Tier 1 to Tier 5 system
@@ -193,6 +208,14 @@ Enforcement: Regional Safety Commission issues monthly assessments. Violations c
 
 ### ✅ Good Capture:
 ```markdown
+---
+type: brainstorm
+topic: "Northern clans culture exploration"
+related-codex: []
+related-outline: []
+tags: [brainstorm, notes, worldbuilding, culture]
+---
+
 # Northern Clans Notes
 
 - More isolated than other regions
@@ -263,14 +286,14 @@ Open questions:
 - How to handle inefficiency?
 ```
 
-## When to Transition to Wiki
+## When to Transition to Codex
 
 User: "Okay, I think I've figured out the magic system. It works like [detailed explanation], and I'm set on these rules."
 
 ✅ Good response:
-"Sounds like you've finalized this! Want me to create a documentation page for the magic system? That would be the official reference instead of exploratory notes."
+"Sounds like you've finalized this! Want me to create a Codex entry? That would go in `Codex/Concepts/` as the official reference instead of exploratory notes in `Notes/`."
 
-Then use cw-official-wiki to create canonical documentation.
+Then run `/codex` and select "Concept" to create the canonical entry in `Codex/Concepts/`.
 
 ## Notice Beyond the List
 

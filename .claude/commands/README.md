@@ -1,69 +1,77 @@
-# Creative Writing Slash Commands
+# Creative Writing — Slash Commands
 
-These custom slash commands provide explicit mode switching for the creative writing skills.
+Eight commands covering the full novel-writing workflow. Commands are composable and designed to work top-down, but you can enter at any level.
 
-## Available Commands
+## Recommended Workflow
 
-### Brainstorming
-- **`/bs`** - Brainstorm and explore story ideas
-
-**Usage:**
 ```
-/bs I'm thinking about a magic system where...
-/bs What if the antagonist actually...
+/novel-init → /pitch → /codex → /outline → /style → /beat → /critique → /bs → /beat
 ```
 
-### Writing Prose
-- **`/write [style]`** - Enter prose writing mode
+---
 
-**Usage:**
+## Commands
+
+| Command | Purpose |
+|---------|---------|
+| `/novel-init` | Initialize a new novel vault (scaffold + first logline) |
+| `/pitch` | Develop logline, elevator pitch, premise, and synopses |
+| `/codex` | Create/update Codex entries (characters, locations, items, events, factions, concepts) |
+| `/outline` | Build outline top-down (act → chapter → scene → beats) |
+| `/beat <Act#/Chapter#/Scene#> [beat #]` | Write beat prose — the atomic unit of novel writing |
+| `/style` | Create or update `Style/master.md` from sample writing |
+| `/critique <beat\|scene\|chapter\|outline>` | Get structured feedback at any scope |
+| `/bs` | Brainstorm and capture exploratory ideas |
+
+---
+
+## Usage Examples
+
 ```
-/write                          (uses project style guides if found)
-/write action-heavy             (writes in action-heavy style)
-/write literary                 (writes in literary style)
-/write the next scene where...  (context for what to write)
+/novel-init
+/pitch I have a logline: A retired hitman...
+/codex Create a character entry for Elena Vasquez
+/outline Build act structure for a three-act thriller
+/beat Act1/Chapter01/Scene02 beat 3
+/style
+/critique scene
+/bs What if the antagonist is actually the protagonist's father?
 ```
 
-If a style name is provided and no matching style guide exists, Claude will use general conventions for that style.
+---
 
-### Documentation/Wiki
-- **`/wiki`** - Create canonical documentation pages
+## Vault Structure
 
-**Usage:**
+All commands write to an **Obsidian-compatible vault**:
+
 ```
-/wiki Create a character profile for my protagonist
-/wiki Document the magic system
+MyNovel/
+├── Codex/
+│   ├── Characters/
+│   ├── Locations/
+│   ├── Items/
+│   ├── Events/
+│   ├── Factions/
+│   └── Concepts/
+├── Story/
+│   ├── Pitch/
+│   ├── Synopsis/
+│   ├── Outline/
+│   └── Chapters/Act1/Chapter01/Scene01.md
+├── Style/
+│   └── master.md
+├── Notes/
+└── Meta/
+    └── project.md
 ```
 
-### Critique
-- **`/critique`** - Get feedback on your writing
+All files use YAML frontmatter. `[[WikiLinks]]` connect related Codex entries.
 
-**Usage:**
-```
-/critique [file or paste text]
-/critique Analyze the pacing in chapter 3
-```
+---
 
-### Creating Style Guides
+## Key Design Decisions
 
-To create style guides, use natural language within `/write` mode or just ask directly:
-- "Analyze my writing style and create a style guide"
-- "Create a dialogue style guide from these chapters"
-
-The `/write` command will direct you to the style-skill-creator skill when needed.
-
-## Why Use Slash Commands?
-
-1. **Explicit invocation** - Clear signal about which skill you want
-2. **Context shifting** - The command completely shifts Claude's focus to the skill
-3. **Shorter syntax** - Easier than "use the cw-brainstorming skill"
-4. **Arguments** - Pass additional context directly
-
-## Natural Language Still Works
-
-You can still use natural language to invoke skills:
-- "Help me brainstorm ideas for my antagonist"
-- "Write this scene in my style"
-- "Create a wiki page for this location"
-
-The slash commands just provide an explicit alternative when you want guaranteed skill activation.
+- **`/beat` loads minimal context** — only what's needed to write the current beat. Context stays lean and cost-manageable.
+- **Top-down outline discipline** — act structure must exist before chapter outlines; chapter outlines before scene breakdowns.
+- **One style guide** — `Style/master.md` only. `/beat` loads it automatically.
+- **Codex is canonical** — all world-building lives in `Codex/`. `/beat` and `/outline` reference it.

@@ -17,4 +17,6 @@ Adapt the critique to scope:
 
 After critique, suggest next action: /bs to brainstorm fixes, /outline to revise structure, /codex to check character consistency.
 
+> **Agent tip:** Use the `cw-plan` primary agent.
+
 $ARGUMENTS

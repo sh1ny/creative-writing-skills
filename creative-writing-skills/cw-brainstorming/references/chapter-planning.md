@@ -1,6 +1,6 @@
 # Chapter Planning - Brainstorming Reference
 
-This reference helps capture chapter beat and scene exploration. User guides structure (or lack of structure) - don't impose templates.
+This reference helps capture chapter beat and scene exploration for your novel. User guides structure (or lack of structure) - don't impose templates.
 
 ## What Gets Captured
 
@@ -23,6 +23,13 @@ This reference helps capture chapter beat and scene exploration. User guides str
 - All options coexist
 - User might not decide yet
 - Multiple possibilities are fine
+
+## Vault Integration
+
+When capturing chapter planning:
+- Note related outline location: `[[Story/Outline/Act1/chapter-05]]`
+- If chapter features specific characters, note them: `[[CharacterName]]`
+- If set in a location, note it for later Codex reference
 
 ## Not Structure Templates
 
@@ -85,6 +92,14 @@ This is exploration, not finalization:
 
 ### ✅ Good Capture:
 ```markdown
+---
+type: brainstorm
+topic: "Chapter 5 guilt confrontation planning"
+related-codex: [[Protagonist]], [[Mentor]]
+related-outline: [[Story/Outline/Act1/chapter-05]]
+tags: [brainstorm, notes, chapter-planning]
+---
+
 # Chapter 5 Planning
 
 Purpose:
@@ -132,6 +147,14 @@ User: "I don't know how this chapter should go yet"
 
 ✅ Good:
 ```markdown
+---
+type: brainstorm
+topic: "Chapter 6 - exploring structure"
+related-codex: []
+related-outline: [[Story/Outline/Act1/chapter-06]]
+tags: [brainstorm, notes, chapter-planning]
+---
+
 # Chapter 6 Planning
 
 Structure and beats: not decided yet
@@ -143,6 +166,13 @@ Structure and beats: not decided yet
 "Let me suggest a three-act structure with an emotional opening, rising conflict, and bittersweet resolution..."
 
 Don't fill uncertainty with suggestions unless they ask for help.
+
+## Transitioning to Outline
+
+When chapter beats are decided:
+> "This scene idea could be added to your outline — run `/outline` to integrate it into your story structure."
+
+Brainstorming captures exploration; the outline captures decided structure. Notes in `Notes/` can feed into `Story/Outline/`.
 
 ## Notice Beyond the List
 

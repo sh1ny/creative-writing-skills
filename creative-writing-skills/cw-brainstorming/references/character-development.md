@@ -1,6 +1,6 @@
 # Character Development - Brainstorming Reference
 
-This reference helps capture exploration of character motivations, arcs, and relationships. Record what user explores, don't write psychology beyond what they stated.
+This reference helps capture exploration of character motivations, arcs, and relationships for your novel. Record what user explores, don't write psychology beyond what they stated.
 
 ## What Character Exploration Looks Like
 
@@ -37,6 +37,13 @@ This is exploratory - multiple options coexist, backstory often undecided, arcs 
 
 **Don't write psychology analysis:**
 User gives surface-level motivation → don't create deep psychological profile
+
+## Vault Integration
+
+When capturing character brainstorming:
+- Note character name for later Codex entry: `[[CharacterName]]`
+- If discussing relationship with another character, note that too
+- Backstory possibilities can stay exploratory until ready to document
 
 ## Common Exploration Areas
 
@@ -106,6 +113,14 @@ Note source when including researched info
 
 ### ✅ Good Capture:
 ```markdown
+---
+type: brainstorm
+topic: "Alex motivation exploration"
+related-codex: [[Alex]]
+related-outline: []
+tags: [brainstorm, notes, character]
+---
+
 # Alex - Motivation Notes
 
 - Guilt from the incident
@@ -149,6 +164,14 @@ Open questions:
 
 ### ✅ Good Capture:
 ```markdown
+---
+type: brainstorm
+topic: "Maya character arc exploration"
+related-codex: [[Maya]]
+related-outline: []
+tags: [brainstorm, notes, character-arc]
+---
+
 # Maya - Arc Notes
 
 Starting point:
@@ -204,6 +227,14 @@ Maya becomes leader who values every team member. Ruthlessness tempered by compa
 
 ### ✅ Good Capture:
 ```markdown
+---
+type: brainstorm
+topic: "Jordan and Sam relationship dynamics"
+related-codex: [[Jordan]], [[Sam]]
+related-outline: []
+tags: [brainstorm, notes, relationship]
+---
+
 # Jordan & Sam - Relationship Notes
 
 Dynamic:
@@ -255,6 +286,14 @@ User: "Not sure about this character yet. Just trying to figure out who they are
 
 ✅ Good:
 ```markdown
+---
+type: brainstorm
+topic: "New character - exploring"
+related-codex: []
+related-outline: []
+tags: [brainstorm, notes, character]
+---
+
 # Character Notes - [Name]
 
 User exploring, nothing concrete yet
@@ -308,3 +347,10 @@ Open questions:
 ## Notice Beyond the List
 
 Characters are complex. If user explores aspects not listed here - capture them. These are common patterns, not limitations. Trust your judgment on what matters for their characters.
+
+## Transitioning to Codex
+
+When character development is finalized:
+> "This character concept is ready to become a Codex entry — run `/codex` to create the official character profile."
+
+The Codex is where finalized character documentation lives. Brainstorming notes in `Notes/` capture the exploration; Codex entries in `Codex/Characters/` capture the decided facts.

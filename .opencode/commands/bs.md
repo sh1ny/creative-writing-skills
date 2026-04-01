@@ -12,4 +12,6 @@ Remember:
 - After capturing, engage: ask clarifying questions, offer directions, connect threads
 - Suggest next step: ready for /codex? add to /outline?
 
+> **Agent tip:** Invoke `@cw-brainstorm` directly for dedicated ideation without file writes.
+
 $ARGUMENTS

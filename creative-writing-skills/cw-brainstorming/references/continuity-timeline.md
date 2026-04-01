@@ -1,6 +1,13 @@
 # Continuity and Timeline - Brainstorming Reference
 
-This reference helps work through chronology and contradictions. Track timeline, identify conflicts, but don't auto-resolve - user decides canon.
+This reference helps work through chronology and contradictions for your novel. Track timeline, identify conflicts, but don't auto-resolve - user decides canon.
+
+## Vault Integration
+
+When capturing timeline/continuity brainstorming:
+- Note chapters affected: `[[Story/Outline/Act1/chapter-03]]`, `[[Story/Outline/Act2/chapter-12]]`
+- Note characters involved: `[[CharacterName]]`
+- If fixing contradictions, you might update notes in `Notes/` or directly edit in the outline/Manuscript
 
 ## Timeline Exploration
 
@@ -117,6 +124,14 @@ Note source when including researched info
 
 ### ✅ Good Capture:
 ```markdown
+---
+type: brainstorm
+topic: "Timeline/geography contradiction - route to Capital"
+related-codex: [[Character B]]
+related-outline: [[Story/Outline/Act1/chapter-02]]
+tags: [brainstorm, notes, continuity, contradiction]
+---
+
 # Timeline/Geography Contradiction
 
 Contradiction identified:
@@ -165,6 +180,14 @@ Rivertown repositioned northwest of Home, making the detour logical for supply g
 
 ### ✅ Good Capture:
 ```markdown
+---
+type: brainstorm
+topic: "Knowledge tracking - the project truth"
+related-codex: [[Maya]], [[Jordan]], [[Sam]]
+related-outline: [[Story/Outline/Act1/chapter-03]], [[Story/Outline/Act1/chapter-01]], [[Story/Outline/Act2/chapter-08]]
+tags: [brainstorm, notes, continuity, knowledge-tracking]
+---
+
 # Knowledge Tracking - The Project Truth
 
 Who knows what when:
@@ -220,6 +243,14 @@ Team must work through betrayal and secrecy. Trust slowly rebuilds through share
 
 ### ✅ Good Capture:
 ```markdown
+---
+type: brainstorm
+topic: "Timeline gap between Arc 1 and Arc 2"
+related-codex: []
+related-outline: [[Story/Outline/Act1]], [[Story/Outline/Act2]]
+tags: [brainstorm, notes, continuity, timeline]
+---
+
 # Timeline - Arc 1 to Arc 2 Gap
 
 Duration between arcs:

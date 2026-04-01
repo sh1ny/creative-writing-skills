@@ -1,11 +1,11 @@
 ---
 name: cw-brainstorming
-description: Creative writing skill for capturing story brainstorming. Use when the user is exploring narrative ideas, discussing characters, planning episodes, or thinking through story possibilities. Creates minimal working notes that preserve creative freedom by recording only what was stated and marking sources.
+description: Creative writing skill for capturing novel brainstorming. Use when the user is exploring characters, plot directions, worldbuilding, chapter structure, or timeline/continuity for their novel. Creates minimal working notes that preserve creative freedom by recording only what was stated and marking sources.
 ---
 
 # Brainstorming Capture
 
-Capture story brainstorming in working note format that preserves creative freedom.
+Capture novel brainstorming in working note format that preserves creative freedom and fits into your vault workflow.
 
 ## Core Principle
 
@@ -19,7 +19,7 @@ Record brainstorming WITHOUT:
 
 ## Types of Brainstorming
 
-This skill handles all brainstorming types:
+This skill handles all brainstorming types for novel writing:
 - Story/plot directions (general narrative exploration)
 - Chapter structure and beats (planning individual chapters)
 - Worldbuilding and lore (magic systems, cultures, history, geography)
@@ -42,7 +42,7 @@ Record ONLY what the user explicitly states. Do NOT add elaborations, examples t
 **The problem is mixing, not suggesting:**
 
 ❌ User: "Character A competes with B" → Capture: "A and B compete for leadership through a tournament with three rounds..."
-✅ User: "Character A competes with B" → Capture: "A and B compete" + optional: "<AI>Tournament? Political? Trial?</AI>"
+✅ User: "Character A competes with B" → Capture: "A and B compete" + optional: `<AI>Tournament? Political? Trial?</AI>`
 
 ### 2. Source Tagging (Simple 3-Tag System)
 
@@ -82,6 +82,24 @@ Keep it vague if user leaves it vague:
 
 Working notes can contain contradictions and multiple possibilities. Don't resolve them - just list the options being considered.
 
+## File Placement
+
+**Location:** `Notes/` folder in your vault
+**Naming:** `brainstorm-[topic].md` (e.g., `brainstorm-leadership-competition.md`, `brainstorm-elara-backstory.md`)
+
+**Frontmatter for all brainstorm notes:**
+```yaml
+---
+type: brainstorm
+topic: ""           # Brief description of what's being brainstormed
+related-codex: []   # [[CharacterName]], [[LocationName]] etc.
+related-outline: [] # [[Story/Outline/Act1/chapter-01]]
+tags: [brainstorm, notes]
+---
+```
+
+**Before starting:** Optionally read `Meta/project.md` if it exists and the brainstorming connects to your novel's broader context (characters, settings, ongoing plot threads).
+
 ## Output Approach
 
 **Use whatever structure fits the discussion.** Could be:
@@ -110,6 +128,14 @@ Working notes can contain contradictions and multiple possibilities. Don't resol
 
 ### ✅ Good Capture:
 ```markdown
+---
+type: brainstorm
+topic: "Leadership competition between X and Y"
+related-codex: [[X]], [[Y]], [[Z]]
+related-outline: []
+tags: [brainstorm, notes]
+---
+
 # Leadership Competition Notes
 
 - X and Y compete for leadership
@@ -205,14 +231,41 @@ Notes should feel skeletal and incomplete. That's the point - preserves creative
 
 **The goal:** Help the user think through their ideas, not take over the creative process.
 
+## Composability with Novel Workflow
+
+After brainstorming, you might suggest next steps based on how the session went:
+
+**Character concept ready to finalize?**
+> "This character concept is developed enough to become a Codex entry — run `/codex` to create the official character profile."
+
+**Scene idea that should go in outline?**
+> "This scene idea could be added to your outline — run `/outline` to integrate it into your story structure."
+
+**Worldbuilding resolved well?**
+> "You've sorted out how the magic system works — run `/codex` to create the official documentation."
+
+**Need critique of what's been written?**
+> "This chapter draft could use fresh eyes — run `/critique` for feedback."
+
+**Brainstorming and prose writing work together:**
+> "You've roughed out the scene beats — when you're ready to write the prose, run `/beat` to write prose beat by beat."
+
 ## Skills are Composable
 
-Feel free to combine with other skills when helpful (e.g., using cw-official-docs to document finalized worldbuilding, or cw-story-critique to analyze what you're brainstorming).
+Feel free to combine with other skills when helpful:
+- Brainstorm → use `/codex` to document finalized characters, locations, or concepts
+- Brainstorm → use `/critique` to analyze what you've written
+- Brainstorm → use `/outline` to integrate scene ideas into the story structure
 
-## File Placement (Claude Code)
+## Vault Integration Summary
 
-1. Check project docs for conventions
-2. Look at where similar content lives
-3. Place near related content
-4. Name: `brainstorm-[topic].md`
-5. Ask if unclear
+| Element | Placement |
+|---------|-----------|
+| Brainstorm notes | `Notes/brainstorm-[topic].md` |
+| Character profiles | `Codex/Characters/[name].md` |
+| Location docs | `Codex/Locations/[name].md` |
+| World lore | `Codex/Concepts/[topic].md` |
+| Story outline | `Story/Outline/...` |
+| Project context | `Meta/project.md` |
+
+(End of file - total 278 lines)
