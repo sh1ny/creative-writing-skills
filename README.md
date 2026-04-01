@@ -175,11 +175,11 @@ Run `/style` again after a revision session to keep the guide current as your vo
 
 ```bash
 # Install from GitHub marketplace
-claude plugin marketplace add haowjy/creative-writing-skills
+claude plugin marketplace add sh1ny/creative-writing-skills
 claude plugin install creative-writing-skills@creative-writing-skills
 
 # Or install from a local clone
-git clone https://github.com/haowjy/creative-writing-skills.git
+git clone https://github.com/sh1ny/creative-writing-skills.git
 claude plugin marketplace add ./creative-writing-skills
 claude plugin install creative-writing-skills
 ```
@@ -194,7 +194,7 @@ The skill SKILL.md files are tool-agnostic and work in opencode without changes.
 
 ### Claude.ai
 
-Download `.skill` files from the [Releases page](https://github.com/haowjy/creative-writing-skills/releases) and upload them to Claude.ai via Settings → Capabilities → Skills.
+Download `.skill` files from the [Releases page](https://github.com/sh1ny/creative-writing-skills/releases) and upload them to Claude.ai via Settings → Capabilities → Skills.
 
 ---
 

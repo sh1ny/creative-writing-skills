@@ -1,8 +1,8 @@
 {
     "name": "creative-writing-skills",
     "owner": {
-      "name": "Jimmy Yao",
-      "email": "dev.jimm.py@gmail.com"
+      "name": "sh1ny",
+      "github": "https://github.com/sh1ny"
     },
     "metadata": {
       "description": "A complete novel-writing workflow with Obsidian-compatible vault structure — pitch, codex, outline, beat writing, critique, and brainstorming",
