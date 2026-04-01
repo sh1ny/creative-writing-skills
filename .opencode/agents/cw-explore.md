@@ -1,7 +1,7 @@
 ---
 description: Fast read-only vault exploration subagent. Invoke with @explore to find Codex entries, read outlines, check scene lists, or answer "what exists?" questions before writing or planning.
 mode: subagent
-model: anthropic/claude-haiku-4-20250514
+model: anthropic/claude-haiku-4-5
 temperature: 0.1
 permission:
   read: allow
